@@ -1,90 +1,95 @@
-import React from 'react'
-
-
+import React from "react";
 import {
   Phone,
   Bot,
   ArrowLeftRight,
   Calendar,
   XCircle,
-  Clock
+  Clock,
 } from "lucide-react";
 
-const dashboardCards = [
+const cards = [
   {
-    id: 1,
     title: "Total Calls Today",
     value: 127,
     change: "+12%",
-    trend: "up",
     icon: Phone,
-    iconBg: "bg-sky-500",
+    bg: "bg-[linear-gradient(#2B7FFF,#00B8DB)]",
   },
   {
-    id: 2,
     title: "AI-Handled Calls",
     value: 98,
     change: "+77%",
-    trend: "up",
     icon: Bot,
-    iconBg: "bg-fuchsia-500",
+    bg: "bg-[linear-gradient(#AD46FF,#F6339A)]",
   },
   {
-    id: 3,
     title: "Warm Transfer",
     value: 23,
     change: "+18%",
-    trend: "up",
     icon: ArrowLeftRight,
-    iconBg: "bg-orange-500",
+    bg: "bg-[linear-gradient(#FF6900,#FF6900)]",
   },
   {
-    id: 4,
     title: "Appointments Booked",
     value: 34,
     change: "+8%",
-    trend: "up",
     icon: Calendar,
-    iconBg: "bg-emerald-500",
+    bg: "bg-[linear-gradient(#00C950,#00BC7D)]",
   },
   {
-    id: 5,
-    title: "Missed / Failed Calls",
+    title: "Missed Calls",
     value: 6,
     change: "-3%",
-    trend: "down",
     icon: XCircle,
-    iconBg: "bg-red-500",
+    bg: "bg-[linear-gradient(#FB2C36,#FF2056)]",
   },
   {
-    id: 6,
     title: "Avg Call Duration",
     value: "3:42",
     change: "+15%",
-    trend: "up",
     icon: Clock,
-    iconBg: "bg-indigo-500",
+    bg: "bg-[linear-gradient(#615FFF,#2B7FFF)]",
   },
 ];
 
-
-
-
-const Dashboard = () => {
+function Dashboard() {
   return (
-    <div>
-        {dashboardCards.map((item, index) => (
-            <div key={index} className='w-[374px] h-[146px] border border-[#2B7FFF33] bg-[#0F172B80] p-5 rounded-2xl'>
-                <div>
-                    <h2> {item?.title} </h2>
-                    <span> {item?.value} </span>
-                    <span> {item?.change} </span>
-                </div>
-                <div> {`<> ${item?.icon} </>`} </div>
+    <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {cards.map((card, index) => {
+        const Icon = card.icon;
+        const isPositive = card.change.startsWith("+");
+
+        return (
+          <div
+            key={index}
+            className="border border-[#2B7FFF33] bg-[#0F172B] p-5 rounded-2xl flex justify-between items-start"
+          >
+
+
+            <div className="space-y-2">
+              <div className="text-[#90A1B9] text-sm leading-5 font-normal">{card.title}</div>
+              <div className="text-white text-3xl font-medium">{card.value}</div>
+              <div
+                className={
+                  isPositive ? "text-green-400 text-sm" : "text-red-400 text-sm"
+                }
+              >
+                {card.change}
+              </div>
             </div>
-        ))}
+
+            {/* Icon part */}
+            <div
+              className={`w-[48px] h-[48px] rounded-xl flex items-center justify-center ${card.bg}`}
+            >
+              <Icon className="w-[20px] h-[20px]" color="white" />
+            </div>
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
