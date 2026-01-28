@@ -49,7 +49,7 @@ const page = () => {
         </div>
 
         {/* call list  */}
-        <div className='mt-[38px]'>
+        <div className='mt-[38px] mb-5'>
             <CallList/>
         </div>
 

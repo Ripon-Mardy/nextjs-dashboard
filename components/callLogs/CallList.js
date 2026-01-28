@@ -1,10 +1,9 @@
-// components/CallList.jsx
 "use client";
 
 import React from "react";
 import { Phone, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
-// Sample data (you can replace with real data from API / props)
+
 const callListData = [
   {
     phone: "+1 (555) 345-6789",
@@ -55,7 +54,7 @@ const callListData = [
 
 const CallList = () => {
   return (
-    <div>
+    <div className="w-1/2">
       <div className="bg-[#0F172B80] h-[643px] rounded-xl border border-[#2B7FFF33]">
         <div className="px-4 py-4 border-b border-[#2B7FFF33]">
           <h2 className="text-xl font-medium text-white">Call List</h2>
@@ -63,16 +62,28 @@ const CallList = () => {
 
         <div>
           {callListData.map((list, index) => (
-            <div key={index}>
+            <div key={index} className="px-4 py-4 border-b border-[#2B7FFF33] last:border-0">
 
-              <div>
-                <div>
-                  <Phone />
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-start justify-start gap-3">
+
+                <div className="bg-[linear-gradient(#2B7FFF,#00B8DB)] w-[40px] h-[40px] rounded-xl flex items-center justify-center">
+                  <Phone className="w-[20px] h-[20px] " />
                 </div>
-                <div>
-                  <h2> {list?.phone} </h2>
-                  <p> {list?.time} </p>
+                <div className="flex items-center justify-between flex-col gap-0.5">
+                  <h2 className="text-[16px] font-normal text-white"> {list?.phone} </h2>
+                  <p className="text-[#90A1B9] text-xs font-normal"> {list?.time} </p>
                 </div>
+
+              </div>
+
+              <div className={`${list?.statusColor} p-2 rounded-xl text-xs font-normal`}> {list?.status} </div>
+              </div>
+
+              <div className="flex items-center justify-start gap-3 text-xs mt-[20px]">
+                <span className="flex items-center justify-center gap-1 text-[#90A1B9]"> <Clock className="w-[16px] h-[16px]"/>  {list?.duration} </span>
+                <span className="flex items-center justify-center gap-1 text-[#90A1B9]"> <CheckCircle className="w-[16px] h-[16px]"/> {list?.action} </span>
+                <span className="flex items-center justify-center gap-1 text-[#90A1B9] bg-[#2B7FFF33] py-0.5 px-2 rounded-sm"> {list?.issue} </span>
               </div>
 
             </div>
