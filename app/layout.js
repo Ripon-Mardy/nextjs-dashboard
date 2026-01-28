@@ -21,10 +21,10 @@ export default function RootLayout({ children }) {
         className={`bg-main text-white h-auto ${inter.className} antialiased`}
       >
        <main className="max-w-[1440px] mx-auto flex">
-        <div className="w-[241px] border-r border-[#111B3C] min-h-screen">
+        <div className="w-[241px] ml-auto border-r border-[#111B3C] min-h-screen fixed h-screen">
           <Sidebar/>
         </div>
-       <div className="w-full">
+       <div className="flex-1 ml-[241px]">
          <Header/>
          {children}
        </div>

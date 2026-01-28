@@ -4,6 +4,7 @@
     /* background  */
   --bg-main : #1D293D;
   --bg-sidebar : #111B3C;
+  --bg-box : #0F172B80;
 
   /* Gradients */
   --bg-gradient-main: linear-gradient(
@@ -38,4 +39,8 @@
 
 .menu-shadow {
   box-shadow: var(--menu-shadow);
+}
+
+.bg-box{
+    background-color: var(--bg-box);
 }

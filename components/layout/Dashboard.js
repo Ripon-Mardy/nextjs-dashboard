@@ -38,7 +38,7 @@ const cards = [
     bg: "bg-[linear-gradient(#00C950,#00BC7D)]",
   },
   {
-    title: "Missed Calls",
+    title: "Missed/Failed Calls",
     value: 6,
     change: "-3%",
     icon: XCircle,
@@ -57,7 +57,6 @@ function Dashboard() {
   return (
     <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {cards.map((card, index) => {
-        const Icon = card.icon;
         const isPositive = card.change.startsWith("+");
 
         return (
@@ -83,7 +82,7 @@ function Dashboard() {
             <div
               className={`w-[48px] h-[48px] rounded-xl flex items-center justify-center ${card.bg}`}
             >
-              <Icon className="w-[20px] h-[20px]" color="white" />
+              <card.icon className="w-[20px] h-[20px]" color="white" />
             </div>
           </div>
         );
