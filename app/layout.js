@@ -1,16 +1,8 @@
-import { Geist, Geist_Mono , Inter } from "next/font/google";
+import {Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/Sidebar";
+import Header from "@/components/layout/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,13 +18,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`bg-main text-white ${inter.className} antialiased`}
+        className={`bg-main text-white h-auto ${inter.className} antialiased`}
       >
        <main className="max-w-[1440px] mx-auto flex">
-        <div className="w-[241px] border-r border-gray-200 h-screen">
+        <div className="w-[241px] border-r border-[#111B3C] min-h-screen">
           <Sidebar/>
         </div>
+       <div className="w-full">
+         <Header/>
          {children}
+       </div>
        </main>
       </body>
     </html>
