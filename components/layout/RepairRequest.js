@@ -42,16 +42,16 @@ const RepairRequest = () => {
           const widthPercentage = (item.count / maxCount) * item.count;
 
           return (
-            <div key={item.name} className="flex flex-col gap-1.5">
+            <div key={index} className="flex flex-col gap-1.5">
 
               <div className="flex items-center justify-between">
                 <span
                   className={`text-sm font-medium`}
                 >
-                  {item.name}
+                  {item?.name}
                 </span>
                 <span className="text-sm font-normal text-gray-400">
-                  {item.count} requests
+                  {item?.count} requests
                 </span>
               </div>
 
@@ -63,6 +63,8 @@ const RepairRequest = () => {
                   style={{ width: `${widthPercentage}%` }}
                 />
               </div>
+
+
             </div>
           );
         })}

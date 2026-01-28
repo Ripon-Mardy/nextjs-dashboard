@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           <Sidebar/>
         </div>
        <div className="flex-1 ml-[241px]">
-         <Header/>
+         <Header call="Overview" dashboard='Dashboard Overview' />
          {children}
        </div>
        </main>
