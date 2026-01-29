@@ -22,6 +22,10 @@ const Header = () => {
     if(pathname === '/appointments') {
       return 'Appointments'
     }
+
+    if(pathname === '/settings') {
+      return 'Settings'
+    }
   }
   const pageTitle = getPageTitle();
   return (
