@@ -54,7 +54,7 @@ const callListData = [
 
 const CallList = () => {
   return (
-    <div className="w-1/2">
+    <div>
       <div className="bg-[#0F172B80] h-[643px] rounded-xl border border-[#2B7FFF33]">
         <div className="px-4 py-4 border-b border-[#2B7FFF33]">
           <h2 className="text-xl font-medium text-white">Call List</h2>

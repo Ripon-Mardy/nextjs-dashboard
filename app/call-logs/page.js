@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Search, ChevronDown } from 'lucide-react';
 import CallList from '@/components/callLogs/CallList';
+import CallDetails from '@/components/callLogs/CallDetails';
 
 const page = () => {
   return (
@@ -49,8 +50,9 @@ const page = () => {
         </div>
 
         {/* call list  */}
-        <div className='mt-[38px] mb-5'>
+        <div className='mt-[38px] mb-5 grid grid-cols-1 md:grid-cols-2 gap-6 w-full'>
             <CallList/>
+            <CallDetails/>
         </div>
 
 

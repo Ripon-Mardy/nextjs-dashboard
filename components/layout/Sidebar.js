@@ -25,7 +25,6 @@ const menus = [
         <Image src={logo} className="w-6 h-6" alt="logo" />
       </div>
 
-
       {/* menu  */}   
       <div className="space-y-7 mt-[66px]">
         {menus.map((item, index) => (
