@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SquarePlay } from 'lucide-react';
+import { SquarePlay, NotepadText  } from 'lucide-react';
 
 const CallDetails = () => {
   return (
@@ -59,6 +59,46 @@ const CallDetails = () => {
           <div className='mt-[24px] bg-[linear-gradient(#AD46FF33,#F6339A33)] flex items-center justify-center gap-2 text-[16px] font-normal w-full h-[50px] rounded-[14px] border border-[#AD46FF4D] text-[#C27AFF]'>
             <SquarePlay className='w-5 h-5'/>
             <span>Play Audio Recording</span>
+          </div>
+
+          {/* conversation transcript  */}
+          <div className='mt-[22px]'>
+
+            <div className='flex items-center justify-start gap-1'>
+              <NotepadText className='w-5 h-5 text-[#51A2FF]' />
+              <h2 className='font-normal text-[16px] leading-6 text-white'>Conversation Transcript</h2>
+            </div>
+
+            <div className='bg-[#1D293D80] max-w-[515px] rounded-[14px] pt-4 px-4 space-y-3 mt-3'>
+
+              <div className='space-y-1'>
+                <h2 className='text-[#05DF72] font-normal text-sm leading-5'>AI Assistant:</h2>
+                <p className='font-medium text-white text-xs leading-5'>Thank you for calling UBreakiFix! How can I help you today?</p>
+              </div>
+
+              <div className='space-y-1'>
+                <h2 className='text-[#51A2FF] font-normal text-sm leading-5'>Customer:</h2>
+                <p className='font-medium text-white text-xs leading-5'>Thank you for calling UBreakiFix! How can I help you today?</p>
+              </div>
+
+              <div className='space-y-1'>
+                <h2 className='text-[#51A2FF] font-normal text-sm leading-5'>AI Assistant:</h2>
+                <p className='font-medium text-white text-xs leading-5'>I can help you with that! For an iPhone 13 screen repair, our price is $199. This includes parts, labor, and comes with a 90-day warranty. Would you like to book an appointment?</p>
+              </div>
+
+              <div className='space-y-1'>
+                <h2 className='text-[#51A2FF] font-normal text-sm leading-5'>Customer:</h2>
+                <p className='font-medium text-white text-xs leading-5'>Yes, please! When are you available?</p>
+              </div>
+
+               <div className='space-y-1'>
+                <h2 className='text-[#51A2FF] font-normal text-sm leading-5'>AI Assistant:</h2>
+                <p className='font-medium text-white text-xs leading-5'>Great! I have availability today at 2:00 PM or tomorrow at 10:00 AM. Which works better for you?</p>
+              </div>  
+
+
+            </div>
+
           </div>
           
         </div>

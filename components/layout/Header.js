@@ -18,6 +18,10 @@ const Header = () => {
     if(pathname === '/call-logs') {
       return 'Call Logs & History'
     }
+
+    if(pathname === '/appointments') {
+      return 'Appointments'
+    }
   }
   const pageTitle = getPageTitle();
   return (
