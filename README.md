@@ -1,6 +1,5 @@
 # nextjs-dashboard
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -17,3 +16,11 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+Chart and graph components were built with light AI assistance to speed up development, while all UI structure, logic, and styling were implemented manually.
+
+
+
+
+
