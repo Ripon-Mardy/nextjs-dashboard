@@ -12,7 +12,7 @@ const Header = () => {
 
   const getPageTitle = () => {
     if(pathname === '/') {
-      return 'Dashboard Overview here'
+      return 'Dashboard Overview'
     };
 
     if(pathname === '/call-logs') {
