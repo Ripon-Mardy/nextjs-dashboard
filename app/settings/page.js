@@ -7,7 +7,7 @@ import { SquarePen } from "lucide-react";
 import avater from "@/public/avater.png";
 
 const page = () => {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
   const [activeTab, setActiveTab] = useState("profile");
 
   const [formData, setFormData] = useState (
