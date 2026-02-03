@@ -104,7 +104,7 @@ const page = () => {
               ? "border-b-2 border-[#87A2FF] text-white"
               : "border-b-2 border-transparent text-slate-400"
           }`}
-            >
+            >     
               Profile
             </button>
 

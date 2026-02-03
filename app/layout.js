@@ -2,6 +2,7 @@ import {Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
+import ClientLayout from "@/components/layout/ClientLayout";
 
 
 const inter = Inter({
@@ -15,20 +16,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body
         className={`bg-main text-white h-auto ${inter.className} antialiased`}
       >
-       <main className="max-w-[1440px] mx-auto flex">
-        <div className="w-[241px] ml-auto border-r border-[#111B3C] min-h-screen fixed h-screen">
-          <Sidebar/>
-        </div>
-       <div className="flex-1 ml-[241px]">
-         <Header call="Overview" dashboard='Dashboard Overview' />
-         {children}
-       </div>
-       </main>
+        
+        <ClientLayout>
+           {children}
+        </ClientLayout>
+
+
       </body>
     </html>
   );
